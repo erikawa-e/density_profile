@@ -20,10 +20,10 @@ This file was used in both the *Rydberg FM* paper and the *Plasmon* paper.
 
 ---
 
-## Step 2: Calculate Density Profiles for Voltage Sweeps
+## Step 2-part1: Calculate Density Profiles for Vmb Voltage Sweeps
 
-- Use **`Calculate_Density_Profile.ipynb`** to compute electron density profiles for your desired voltage configurations.
-- Use **`Calculate_Density_Profile_cupy.ipynb`** if you have a GPU.
+- Use **`Calculate_DensityProfile_Vmb_sweep.ipynb`** to compute electron density profiles for your desired voltage configurations.
+- Use **`Calculate_DensityProfile_Vmb_sweep_cupy.ipynb`** if you have a GPU.
 > ⚠️ **Note:** Please note that there may be more effective ways to optimize the program using `njit` or `cupy` more appropriately than what we implemented above.  
 It is important **not to use** `njit` and `cupy` together.  
 `njit` compiles functions to run on the CPU, while `cupy` manages data on the GPU.  
@@ -56,6 +56,40 @@ The data is stored in:
 VmbSweep/Vib10V_Vobm32V/fixed_electron_number_density/
 ```
 
+
+---
+
+## Step 2-part2: Calculate Density Profiles for Vob Voltage Sweeps
+
+- Use **`Calculate_DensityProfile_Vob_sweep.ipynb`** to compute electron density profiles for your desired voltage configurations.
+- Use **`Calculate_DensityProfile_Vob_sweep_cupy.ipynb`** if you have a GPU.
+- 
+> 
+This notebook includes an example with the following settings:
+
+- $V_\mathrm{ib} = 17$ V
+- $V_\mathrm{mb} = 17$ V
+- $V_\mathrm{ob}$ is swept from $0$ V to $-160$ V, while keeping the total number of electrons fixed  
+  (determined from "Pencentage" % of the saturation condition at $V_\mathrm{ob} = 0$ V and $V_\mathrm{ib} = V_\mathrm{mb} = 17$ V).
+
+The DC potential created by the applied electrode voltages, $\tilde{\phi}$, is stored as:
+
+```
+VobSweep/Vib17V_Vmb17V/Phi_R0pt75_H0pt2_N500_M200_posiE100_epsE-10.0_Vob_step=-0pt3_Vob_start=0_Vob_stop=-160.npy
+```
+
+The data for "Pencentage"=100  is stored in:
+
+```
+VobSweep/Vib17V_Vmb17V/fixed_electron_number_density_100_percent_SatENum/
+```
+
+and the data for "Pencentage"=80  is stored in:
+
+```
+VobSweep/Vib17V_Vmb17V/fixed_electron_number_density_80_percent_SatENum/
+```
+
 ---
 
 ## Step 3: Use the Results
@@ -65,9 +99,9 @@ VmbSweep/Vib10V_Vobm32V/fixed_electron_number_density/
 
 ---
 
-  ⚠️ Due to the large file size, the generated folders `GreenFunction/` and `VmbSweep/` could not be uploaded to GitHub.
+  ⚠️ Due to the large file size, the generated folders `GreenFunction/`, `VmbSweep/` and `VobSweep/` could not be uploaded to GitHub.
 
 Please refer to the following Google Drive link to access the data:
 
-🔗 [Google Drive – GreenFunction and VmbSweep Data](https://drive.google.com/drive/folders/1lC1xuzMQvBS7sev4N5r9cZi6F-KcE2N-?usp=sharing)
+🔗 [Google Drive – GreenFunction VmbSweep VobSweep Data](https://drive.google.com/drive/folders/1lC1xuzMQvBS7sev4N5r9cZi6F-KcE2N-?usp=sharing)
 
