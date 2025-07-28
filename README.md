@@ -20,7 +20,7 @@ This file was used in both the *Rydberg FM* paper and the *Plasmon* paper.
 
 ---
 
-## Step 2-part1: Calculate Density Profiles for Vmb Voltage Sweeps
+## Step 2-ver1: Calculate Density Profiles for Vmb Voltage Sweeps
 
 - Use **`Calculate_DensityProfile_Vmb_sweep.ipynb`** to compute electron density profiles for your desired voltage configurations.
 - Use **`Calculate_DensityProfile_Vmb_sweep_cupy.ipynb`** if you have a GPU.
@@ -59,7 +59,7 @@ VmbSweep/Vib10V_Vobm32V/fixed_electron_number_density/
 
 ---
 
-## Step 2-part2: Calculate Density Profiles for Vob Voltage Sweeps
+## Step 2-ver2: Calculate Density Profiles for Vob Voltage Sweeps
 
 - Use **`Calculate_DensityProfile_Vob_sweep.ipynb`** to compute electron density profiles for your desired voltage configurations.
 - Use **`Calculate_DensityProfile_Vob_sweep_cupy.ipynb`** if you have a GPU.
