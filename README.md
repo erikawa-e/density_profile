@@ -94,6 +94,8 @@ VobSweep/Vib17V_Vmb17V/fixed_electron_number_density_80_percent_SatENum/
 ## Step 2-ver3: Calculate Density Profiles for Vib Voltage Sweeps
 
 - Use **`Calculate_DensityProfile_Vib_sweep.ipynb`** to compute electron density profiles for your desired voltage configurations.
+- Use **`Calculate_DensityProfile_Vib_sweep_cupy.ipynb`** to compute electron density profiles for your desired voltage configurations.
+
 
 ---
 
