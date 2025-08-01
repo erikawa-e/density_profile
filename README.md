@@ -5,6 +5,11 @@ This discrete numerical simulation is based on:
 L. Wilen and R. Giannetta, *Impedance Methods for Surface State Electrons*, J. Low Temp. Phys. **72**, 353–369 (1988). [https://doi.org/10.1007/BF00682147](https://doi.org/10.1007/BF00682147)  
 Intermediate steps follow CGS units; final results are converted to SI.
 
+## Step 0: Define the simulation domain.
+
+<img width="465" height="361" alt="image" src="https://github.com/user-attachments/assets/5c68df6e-5803-4838-aeaa-d60968242210" />
+
+
 ## Step 1: Generate Green's Functions
 
 - Use **`Create_Green_Function_njit.ipynb`**.
